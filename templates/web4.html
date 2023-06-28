@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/static/w4.css">
+        <h1 style="text-align: center; ">COURSE RECOMMENDATION</h1>
+    </head>
+    <body>
+      <div class='parent'>
+        <div class='child1'>
+          <H1 style="text-align: center; color: white;">ENTER COURSE DETAILS</H1>
+          <div class="ip">
+            <form action="#" method="post">
+              <label for="dept"></label>
+              <select name="Department" id="dept">
+                <option value="select">Choose a Department</option>
+                <option value="CSE/IT/AI">CSE\AI\IT</option>
+                <option value="AUTO/MECH">AUTO\MECH</option>
+                <option value="ENGLISH ">ENGLISH</option>
+                <option value="CIVIL ">CIVIL</option>
+                <option value="ECE/EEE/EIE">ECE\EIE\EEE</option>
+                <option value="MATHS ">MATHS</option>
+              </select>
+              <br><br>
+              <select name="payment" id="dept">
+                <option value="select">Choose paid\unpaid</option>
+                <option value="PAID ">paid</option>
+                <option value="UNPAID ">unpaid</option>
+              </select>
+              <br><br>
+              <select name="mode" id="dept">
+                <option value="select">Choose online\offline</option>
+                <option value="ONLINE">online</option>
+                <option value="OFFLINE">offline</option>
+              </select>
+              <br><br>
+              <input type="submit" value="Submit" />
+        </form>
+          </div>
+        </div>
+        <div class='child2'>
+          <h1 style="text-align: center; color: BLACK;">RECOMMENDED COURSE FOR YOU</h1>
+          <div class="child3">
+              {% for result in results %}
+              
+              <div class="card">
+                <div class="tools">
+                  <div class="circle">
+                    <span class="red box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="yellow box"></span>
+                  </div>
+                  <div class="circle">
+                    <span class="green box"></span>
+                  </div>
+                  
+                </div>
+                {{result[2]}}----
+                {{result[3]}}
+        </div>
+        
+        {% endfor %}</div>
+      </div>
+    </body>
+</html>
